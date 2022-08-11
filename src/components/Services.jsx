@@ -8,12 +8,6 @@ export default function Services() {
     <div id="services" className="services">
       <img alt="" src={astroBkg} className="vw-100" />
 
-      <div className="lorem">
-        <h3 className="lorem-title">
-          Lorem Ipsum is simply dummy text of <br /> the printing and typesetting industry.
-        </h3>
-      </div>
-
       <div className="whiteSquare"></div>
 
       <div className="grid-container">

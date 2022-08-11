@@ -4,18 +4,6 @@
   color: $whiteColor;
   padding-top: 14vh;
   overflow: hidden;
-  .lorem {
-    position: absolute;
-    color: #fff;
-    left: 15vw;
-    top: 25vh;
-    .lorem-title {
-      font-size: 2.5rem;
-      line-height: 50px;
-      font-weight: 300;
-      max-width: 665px;
-    }
-  }
   .whiteSquare {
     position: absolute;
     top: 10vh;
@@ -108,15 +96,6 @@
 @media (max-width: 576px) {
   .services {
     top: 0vh;
-    .lorem {
-      text-align: center;
-      top: 25vh;
-      .lorem-title {
-        font-size: 1rem;
-        line-height: 24px;
-        max-width: 665px;
-      }
-    }
     .grid-container {
       margin: 0;
       top: 145vh;

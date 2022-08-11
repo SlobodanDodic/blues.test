@@ -1,0 +1,57 @@
+.footer {
+  position: relative;
+  top: 125vh;
+  color: $whiteColor;
+  text-align: center;
+  overflow: hidden;
+  a {
+    z-index: 1;
+  }
+  .navbar-nav {
+    .social-link {
+      svg {
+        width: 2em;
+        height: 2em;
+      }
+    }
+  }
+  .container-last {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin: 0px 145px;
+    .col-left {
+      text-align: start;
+      a {
+        color: $lightBlue;
+      }
+    }
+    .col-right {
+      text-align: end;
+      a {
+        color: $lightBlue;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 4vh;
+      left: -4vw;
+      width: 100%;
+      height: 100%;
+      background-image: url(/src/assets/footer/summitPeople.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  .summit {
+    position: absolute;
+    top: 6rem;
+    left: 43vw;
+    width: 14vw;
+    height: 14vw;
+    background-color: $lightBlue;
+    transform: rotate(45deg);
+  }
+}

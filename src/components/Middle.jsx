@@ -65,6 +65,12 @@ export default function Middle() {
           </Col>
         </Row>
       </div>
+
+      <div className="lorem">
+        <h3 className="lorem-title">
+          Lorem Ipsum is simply dummy text of <br /> the printing and typesetting industry.
+        </h3>
+      </div>
     </div>
   );
 }

@@ -12,11 +12,11 @@
   .container {
     &::before {
       content: "";
-      top: 15vw;
+      top: 250px;
       left: 0vw;
       position: absolute;
       width: 100vw;
-      height: 22vw;
+      height: 330px;
       background-color: #e8f8fb;
     }
     .row {
