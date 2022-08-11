@@ -1,0 +1,113 @@
+.references {
+  position: relative;
+  top: 165vh;
+  color: $whiteColor;
+  padding: 10vh 0;
+  overflow: hidden;
+  height: 75vh;
+  &::before {
+    content: "";
+    top: 0vh;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    left: 0vh;
+    background-image: url(/src/assets/ref/astro-bkg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bigWhiteSquare {
+    position: absolute;
+    top: 6rem;
+    right: -19vw;
+    width: 34vw;
+    height: 34vw;
+    z-index: -1;
+    transform: rotate(45deg);
+    background-color: $whiteColor;
+    &::after {
+      content: "";
+      top: 13vw;
+      right: 33vw;
+      position: absolute;
+      width: 3vw;
+      height: 3vw;
+      background-color: $lightBlue;
+    }
+  }
+  .row {
+    width: 80vw;
+    .col-content {
+      padding: 30px;
+      h2 {
+        padding-bottom: 20px;
+        font-weight: 300;
+      }
+      span {
+        font-family: $latoFont;
+        font-weight: 300;
+        font-style: italic;
+        color: #d8d8d8;
+      }
+      h4 {
+        padding-top: 15px;
+      }
+      .hide-text {
+        display: none;
+      }
+      .reference-btn {
+        border: 1px solid #fff;
+        margin: 0px;
+        padding: 14px 55px;
+        font-size: 1rem;
+        background-color: transparent;
+        border-radius: 0;
+      }
+    }
+    .col-tabs {
+      padding: 100px 0px;
+    }
+    #aleks {
+      width: 26vw;
+      height: 26vw;
+    }
+  }
+}
+
+.nav-pills {
+  text-align: center;
+  .nav-link {
+    color: $whiteColor;
+    padding: 1px;
+    &:hover {
+      color: $lightBlue;
+    }
+  }
+  .nav-link.active,
+  .nav-pills .show > .nav-link {
+    color: $lightBlue !important;
+    background-color: transparent !important;
+    transform: scale(1.5) !important;
+  }
+}
+
+@media (max-width: 1332px) {
+  .references {
+    top: 200vh;
+  }
+}
+
+@media (max-width: 1200px) {
+  .references {
+    .col-tabs {
+      transform: rotate(270deg);
+    }
+    .tab-content {
+      display: flex;
+      width: 100vw;
+      justify-content: center;
+    }
+  }
+}

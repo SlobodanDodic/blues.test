@@ -1,0 +1,107 @@
+.navbar {
+  height: 100px;
+  padding: 0 !important;
+  border-bottom: 1px solid;
+  background-color: $darkBgColor;
+  border-image: linear-gradient(45deg, $darkBgColor, $greyColor, $darkBgColor) 2;
+  .container-fluid {
+    max-width: 1932px;
+    margin: 0 5vw;
+    .brand {
+      width: 245px;
+      height: 100px;
+      align-items: center;
+      &:hover {
+        color: $whiteColor;
+        border-bottom: 3px solid #2cc1db;
+        margin-bottom: -3px;
+      }
+      img {
+        width: 245px;
+        height: 44px;
+      }
+      span {
+        font-size: 28px;
+        margin-top: 15px;
+      }
+      .fw-bold {
+        margin-left: 45px;
+      }
+    }
+  }
+  .justify-content-end {
+    height: 100px;
+    align-items: center;
+    font-size: 16px;
+    a {
+      height: 100px;
+    }
+    a:hover {
+      color: $whiteColor;
+      border-bottom: 3px solid #2cc1db;
+      margin-bottom: -3px;
+    }
+  }
+  a {
+    color: $whiteColor;
+    text-transform: uppercase;
+    font-family: $robotoFont;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .nav-link.active {
+    color: #5d5d5d !important;
+  }
+  .navbar-toggler-icon {
+    filter: invert(1) !important;
+  }
+  .navbar-toggler {
+    background-color: transparent;
+    border: none;
+    &:hover {
+      border: 1px solid $whiteColor;
+    }
+  }
+}
+
+.offcanvas {
+  padding: 0 20px;
+  background-color: #252931 !important;
+  color: $whiteColor !important;
+  .offcanvas-body .px-5 {
+    padding: 20px 0 !important;
+  }
+  .btn-close {
+    filter: invert(1);
+  }
+  span {
+    font-size: 17px;
+  }
+  .fw-bold {
+    margin-left: 26px;
+  }
+  img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-fluid {
+    margin: 0 2vw !important;
+    .brand {
+      margin: 0 !important;
+      img {
+        width: 139px !important;
+        height: 25px !important;
+      }
+      span {
+        font-size: 16px !important;
+        margin-top: 10px !important;
+      }
+      .fw-bold {
+        margin-left: 25px !important;
+      }
+    }
+  }
+}

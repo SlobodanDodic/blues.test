@@ -1,0 +1,137 @@
+.hero {
+  .backgroundImages {
+    &::before {
+      content: "";
+      top: 0;
+      left: 0%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url(/src/assets/hero/centerRight-bkg.png) right no-repeat;
+    }
+    &::after {
+      content: "";
+      top: 50px;
+      left: 0%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url(/src/assets/hero/upRightCorner-bkg.png) right no-repeat;
+    }
+  }
+  &::before {
+    content: "";
+    bottom: 100px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.25;
+    background-image: url(/src/assets/hero/hero-bkg-2.png), url(/src/assets/hero/hero-bkg-1.png);
+  }
+  .row-info-hide {
+    display: none;
+  }
+  .row-info {
+    width: fit-content;
+    margin: -16px 80px;
+    position: absolute;
+    top: 117px;
+    .col {
+      background-color: $lightBlue;
+      color: $whiteColor;
+      font-size: 0.75em;
+      font-weight: 300;
+      z-index: 1;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      padding: 0.75em;
+      button {
+        background-color: transparent;
+        border: none;
+        z-index: 100;
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .lorem {
+    position: absolute;
+    color: $whiteColor;
+    top: 25vw;
+    left: 15vw;
+    .lorem-title {
+      padding: 0;
+      font-size: 3vw;
+      line-height: 3.75vw;
+      background-color: transparent;
+      display: flex;
+      align-items: flex-end;
+      span {
+        color: $lightBlue;
+      }
+    }
+    .lorem-text {
+      padding: 1rem 0;
+      font-size: 0.85em;
+      line-height: 25px;
+      background-color: transparent;
+      color: #d8d8d8;
+    }
+    button {
+      background-color: $lightBlue !important;
+      padding: 1em 1.5em;
+      border-radius: 0;
+      font-size: 1em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    .row-info {
+      margin: -16px 10px;
+      .col {
+        font-size: 0.5em;
+        text-align: center;
+      }
+    }
+    .lorem {
+      .lorem-title {
+        font-size: 2vh;
+        line-height: 3vh;
+      }
+      .lorem-text {
+        font-size: 7px;
+        line-height: 14px;
+      }
+    }
+    .backgroundImages {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    .lorem {
+      top: 45vw;
+      .lorem-title {
+        font-size: 1vh;
+        line-height: 1vh;
+      }
+      .lorem-text {
+        font-size: 5px;
+        line-height: 5px;
+        padding: 5px 0;
+      }
+    }
+  }
+}
