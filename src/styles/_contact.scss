@@ -1,0 +1,35 @@
+.contact {
+  position: relative;
+  top: 122vh;
+  color: $whiteColor;
+  height: 75vh;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 33vh;
+  h2 {
+    padding-bottom: 20px;
+    font-weight: 300;
+    margin-bottom: 1vh;
+  }
+  .contact-btn {
+    border: none;
+    margin: 0px;
+    padding: 14px 55px;
+    font-size: 1rem;
+    background-color: $lightBlue;
+    border-radius: 0;
+  }
+  &::before {
+    content: "";
+    top: 10vh;
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    z-index: -1;
+    left: 53vw;
+    background-image: url(/src/assets/contact/basketball.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

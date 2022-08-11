@@ -10,38 +10,46 @@
     margin-bottom: 5vh;
   }
   .container {
+    &::before {
+      content: "";
+      top: 15vw;
+      left: 0vw;
+      position: absolute;
+      width: 100vw;
+      height: 22vw;
+      background-color: #e8f8fb;
+    }
     .row {
       .col-image {
         position: relative;
+        padding: 1%;
         img {
-          width: -webkit-fill-available;
+          width: 100%;
         }
       }
       .overlay {
         position: absolute;
-        bottom: 0;
-
-        // background: rgb(0, 0, 0);
-        // background: rgba(0, 0, 0, 0.5);
-
-        background: transparent;
+        bottom: 2%;
         background: linear-gradient(180deg, transparent 0%, rgba(0, 166, 202, 1) 100%);
-
-        color: #f1f1f1;
-        width: 100%;
+        width: 96%;
         transition: 0.5s ease;
         opacity: 0.25;
-        color: white;
-        font-size: 20px;
+        color: $whiteColor;
         padding: 20px;
-        text-align: center;
+        text-align: left;
+        font-family: $latoFont;
+        h6 {
+          font-size: 1rem;
+        }
+        h5 {
+          font-size: 1.25rem;
+        }
         &:hover {
           opacity: 1;
         }
       }
-
-      .third {
-        margin-top: 1rem;
+      .weight {
+        width: 98%;
       }
     }
   }

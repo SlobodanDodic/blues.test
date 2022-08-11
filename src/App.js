@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import References from "./components/References";
 import About from "./components/About";
 import Blog from "./components/Blog";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       </div>
 
       <Blog />
+      <Contact />
     </div>
   );
 }
