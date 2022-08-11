@@ -1,0 +1,48 @@
+.blog {
+  position: relative;
+  top: 155vh;
+  color: $whiteColor;
+  height: 75vh;
+  h2 {
+    padding-bottom: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 5vh;
+  }
+  .container {
+    .row {
+      .col-image {
+        position: relative;
+        img {
+          width: -webkit-fill-available;
+        }
+      }
+      .overlay {
+        position: absolute;
+        bottom: 0;
+
+        // background: rgb(0, 0, 0);
+        // background: rgba(0, 0, 0, 0.5);
+
+        background: transparent;
+        background: linear-gradient(180deg, transparent 0%, rgba(0, 166, 202, 1) 100%);
+
+        color: #f1f1f1;
+        width: 100%;
+        transition: 0.5s ease;
+        opacity: 0.25;
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        text-align: center;
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .third {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

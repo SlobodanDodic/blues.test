@@ -1,6 +1,79 @@
 .about {
   position: relative;
-  top: 185vh;
+  top: 155vh;
   color: $whiteColor;
+  height: 45vh;
   // overflow: hidden;
+  // &::before {
+  //   content: "";
+  //   top: 0vh;
+  //   position: absolute;
+  //   width: 100vw;
+  //   height: 100%;
+  //   z-index: -1;
+  //   left: 0vh;
+  //   background-image: url(/src/assets/ref/astro-bkg.png);
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  // }
+  .bigBlueSquare {
+    position: absolute;
+    top: 2vh;
+    left: -12vw;
+    width: 24vw;
+    height: 24vw;
+    background-color: $lightBlue;
+    transform: rotate(45deg);
+    &::before {
+      content: "";
+      top: 12vw;
+      left: 23vw;
+      position: absolute;
+      width: 3vw;
+      height: 3vw;
+      background-color: $whiteColor;
+    }
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75vw;
+    margin: 0 auto;
+    .col-content {
+      padding: 30px;
+      h2 {
+        padding-bottom: 20px;
+        font-weight: 300;
+        span {
+          color: $lightBlue;
+        }
+      }
+      .span-text {
+        font-family: $latoFont;
+        font-weight: 300;
+        font-style: italic;
+        color: #d8d8d8;
+      }
+      .hide-text {
+        display: none;
+      }
+      .reference-btn {
+        border: 1px solid #fff;
+        margin: 0px;
+        padding: 14px 55px;
+        font-size: 1rem;
+        background-color: transparent;
+        border-radius: 0;
+      }
+    }
+    .col-tabs {
+      padding: 100px 0px;
+    }
+    #me {
+      width: 26vw;
+      height: 26vw;
+    }
+  }
 }

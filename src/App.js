@@ -5,6 +5,7 @@ import Middle from "./components/Middle";
 import Services from "./components/Services";
 import References from "./components/References";
 import About from "./components/About";
+import Blog from "./components/Blog";
 
 function App() {
   return (
@@ -13,8 +14,13 @@ function App() {
       <Homepage />
       <Middle />
       <Services />
-      <References />
-      <About />
+
+      <div className="astro-bkg">
+        <References />
+        <About />
+      </div>
+
+      <Blog />
     </div>
   );
 }

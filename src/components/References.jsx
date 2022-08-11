@@ -5,7 +5,6 @@ import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import Button from "react-bootstrap/Button";
 import { RefData } from "./RefData";
-// import astroBkg from "../assets/middle/astro-bkg.png";
 
 export default function References() {
   const [isActive, setActive] = useState(true);
@@ -16,8 +15,6 @@ export default function References() {
 
   return (
     <div id="references" className="references">
-      {/* <img alt="" src={astroBkg} className="vw-100" /> */}
-
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <Row>
           <Col className="col-tabs" sm={12} xl={3}>

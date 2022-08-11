@@ -2,7 +2,7 @@
   .backgroundImages {
     &::before {
       content: "";
-      top: 0;
+      top: 100px;
       left: 0%;
       position: absolute;
       width: 100%;
@@ -11,7 +11,7 @@
     }
     &::after {
       content: "";
-      top: 50px;
+      top: 100px;
       left: 0%;
       position: absolute;
       width: 100%;

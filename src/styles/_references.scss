@@ -5,19 +5,19 @@
   padding: 10vh 0;
   overflow: hidden;
   height: 75vh;
-  &::before {
-    content: "";
-    top: 0vh;
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-    z-index: -1;
-    left: 0vh;
-    background-image: url(/src/assets/ref/astro-bkg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  // &::before {
+  //   content: "";
+  //   top: 0vh;
+  //   position: absolute;
+  //   width: 100vw;
+  //   height: 100%;
+  //   z-index: -1;
+  //   left: 0vh;
+  //   background-image: url(/src/assets/ref/astro-bkg.png);
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  // }
   .bigWhiteSquare {
     position: absolute;
     top: 6rem;
