@@ -12,7 +12,7 @@ export default function Footer() {
     <div id="footer" className="footer">
       <Navbar key="xl" expand="xl">
         <Container fluid>
-          <Navbar.Brand href="#" className="brand ms-5">
+          <Navbar.Brand href="#" className="brand">
             <img alt="" src={logo} className="position-absolute" />
             <span className="fw-bold">NADA</span>
             <span className="fw-light">MACURA</span>
@@ -27,7 +27,7 @@ export default function Footer() {
             <Nav.Link href="#contact">Contact</Nav.Link>
           </Nav>
 
-          <Nav className="justify-content-end pe-5">
+          <Nav className="justify-content-end">
             <Nav.Link href="#linkedin" className="social-link p-0">
               <TbBrandLinkedin />
             </Nav.Link>
