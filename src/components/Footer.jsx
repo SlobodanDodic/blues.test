@@ -47,7 +47,7 @@ export default function Footer() {
         </Col>
         <Col className="col-right">
           Design and development:{" "}
-          <a href="https://www.popwebdesign.net/" target="_blank">
+          <a href="https://www.popwebdesign.net/" target="_blank" rel="noreferrer">
             PopArt Studio
           </a>
         </Col>

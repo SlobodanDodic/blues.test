@@ -31,26 +31,27 @@
         color: $lightBlue;
       }
     }
+  }
+  .summit {
+    position: absolute;
+    top: 7rem;
+    left: 43vw;
+    width: 13vw;
+    height: 13vw;
+    background-color: $lightBlue;
+    transform: rotate(45deg);
     &::before {
       content: "";
       position: absolute;
-      bottom: 4vh;
-      left: -4vw;
+      bottom: 5vh;
+      left: -9vw;
       width: 100%;
       height: 100%;
       background-image: url(/src/assets/footer/summitPeople.png);
       background-position: center;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: 40%;
+      transform: rotate(-45deg);
     }
-  }
-  .summit {
-    position: absolute;
-    top: 6rem;
-    left: 43vw;
-    width: 14vw;
-    height: 14vw;
-    background-color: $lightBlue;
-    transform: rotate(45deg);
   }
 }
