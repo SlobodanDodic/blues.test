@@ -15,9 +15,16 @@ export default function References() {
 
   return (
     <div id="references" className="references">
+      <div className="cup">
+        <h3 className="cup-text">
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+          Lorem Ipsum has been the industry's" - Jack Welch
+        </h3>
+      </div>
+
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-        <Row>
-          <Col className="col-tabs" sm={12} xl={3}>
+        <Row className="row-pills">
+          <Col className="col-tabs" sm={12} md={3}>
             <Nav variant="pills" className="flex-column">
               {RefData.map((item) => {
                 return (
@@ -28,17 +35,21 @@ export default function References() {
               })}
             </Nav>
           </Col>
-          <Col sm={12} xl={9}>
+          <Col sm={12} md={9}>
             <Tab.Content>
               {RefData.map((item) => {
                 return (
                   <Tab.Pane eventKey={item.eventKey} key={item.id}>
                     <Row>
                       <Col className="col-content" sm={12} lg={6}>
-                        <h2>{item.title}</h2>
-                        <span>{item.text}</span>
+                        <h3>{item.title}</h3>
+                        <span className="span-container">
+                          <span className="quote-first">" </span>
+                          {item.text}
+                          <span className="quote-second"> "</span>
+                        </span>
                         <h4>{item.person}</h4>
-                        <span>
+                        <span className="span-container">
                           {item.desc}
                           <span className={isActive ? "hide-text" : null}>{item.descHide}</span>
                         </span>
@@ -48,7 +59,7 @@ export default function References() {
                           </Button>
                         </div>
                       </Col>
-                      <Col sm={12} lg={4}>
+                      <Col sm={12} lg={4} className="col-image">
                         <img src={item.img} alt={item.title} id="aleks" />
                       </Col>
                     </Row>

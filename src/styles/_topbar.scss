@@ -1,39 +1,37 @@
 .navbar {
-  height: 100px;
+  height: 75px;
+  margin: 0 5vw;
   padding: 0 !important;
   border-bottom: 1px solid;
-  background-color: $darkBgColor;
   border-image: linear-gradient(45deg, $darkBgColor, $greyColor, $darkBgColor) 2;
   .container-fluid {
-    margin: 0 5vw;
     .brand {
-      width: 245px;
-      height: 100px;
-      align-items: center;
+      height: 75px;
       &:hover {
         color: $whiteColor;
         border-bottom: 3px solid #2cc1db;
         margin-bottom: -3px;
       }
       img {
-        width: 245px;
-        height: 44px;
+        width: 145px;
+        margin-bottom: 5px;
       }
       span {
-        font-size: 28px;
-        margin-top: 15px;
+        font-size: 17px;
       }
       .fw-bold {
-        margin-left: 45px;
+        margin-left: 25px;
       }
     }
   }
   .justify-content-end {
-    height: 100px;
+    height: 75px;
     align-items: center;
-    font-size: 16px;
+    font-size: 0.75rem;
+    font-weight: 300;
+    margin-left: 2vw;
     a {
-      height: 100px;
+      height: 75px;
     }
     a:hover {
       color: $whiteColor;
@@ -60,6 +58,9 @@
     border: none;
     &:hover {
       border: 1px solid $whiteColor;
+    }
+    &:focus {
+      box-shadow: none !important;
     }
   }
 }
@@ -93,6 +94,7 @@
       img {
         width: 139px !important;
         height: 25px !important;
+        margin-bottom: 0px !important;
       }
       span {
         font-size: 16px !important;

@@ -1,86 +1,84 @@
-.hero {
-  .backgroundImages {
+.homepage {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 150px 0;
+  background: linear-gradient(180deg, #0b0b2075 0%, transparent 80%), url(/src/assets/hero/hero-image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  .rays-hide {
+    display: none;
+  }
+  .rays {
     &::before {
       content: "";
-      top: 100px;
-      left: 0%;
+      top: 0;
+      right: 0%;
       position: absolute;
       width: 100%;
       height: 100%;
+      opacity: 0.5;
+      z-index: -1;
       background: url(/src/assets/hero/centerRight-bkg.png) right no-repeat;
     }
     &::after {
       content: "";
-      top: 100px;
-      left: 0%;
+      top: 0;
+      right: 0%;
       position: absolute;
       width: 100%;
       height: 100%;
+      opacity: 0.5;
+      z-index: -1;
       background: url(/src/assets/hero/upRightCorner-bkg.png) right no-repeat;
     }
-  }
-  &::before {
-    content: "";
-    bottom: 100px;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.25;
-    background-image: url(/src/assets/hero/hero-bkg-2.png), url(/src/assets/hero/hero-bkg-1.png);
   }
   .row-info-hide {
     display: none;
   }
   .row-info {
-    width: fit-content;
-    margin: -16px 80px;
     position: absolute;
-    top: 117px;
-    .col {
-      background-color: $lightBlue;
-      color: $whiteColor;
-      font-size: 0.75em;
-      font-weight: 300;
-      z-index: 1;
-      display: flex;
-      flex-direction: row;
-      align-content: center;
-      justify-content: center;
-      align-items: center;
-      padding: 0.75em;
-      button {
-        background-color: transparent;
-        border: none;
-        z-index: 100;
-        &:hover {
-          font-weight: 700;
-        }
+    top: 0;
+    left: 3vw;
+    right: 3vw;
+    text-align: center;
+    padding: 3px 7px;
+    width: fit-content;
+    background-color: $lightBlue;
+    color: $whiteColor;
+    font-size: 10px;
+    font-weight: 100;
+    padding: 0.5em;
+    button {
+      background-color: transparent;
+      border: none;
+      font-size: 10px;
+      &:hover {
+        font-weight: 700;
       }
     }
   }
-  .lorem {
-    position: absolute;
+  .home {
     color: $whiteColor;
-    top: 25vw;
-    left: 15vw;
-    .lorem-title {
+    width: 39%;
+    text-align: start;
+    margin-left: 11vw;
+    .home-title {
       padding: 0;
-      font-size: 3vw;
-      line-height: 3.75vw;
+      font-size: 5vh;
+      font-weight: 300;
       background-color: transparent;
-      display: flex;
-      align-items: flex-end;
       span {
         color: $lightBlue;
       }
     }
-    .lorem-text {
+    .home-text {
       padding: 1rem 0;
-      font-size: 0.85em;
-      line-height: 25px;
+      font-size: 1.5vh;
       background-color: transparent;
-      color: #d8d8d8;
+      color: $mutedColor;
     }
     button {
       background-color: $lightBlue !important;
@@ -89,48 +87,36 @@
       font-size: 1em;
     }
   }
-}
-
-@media (max-width: 768px) {
-  .container {
-    .row-info {
-      margin: -16px 10px;
-      .col {
-        font-size: 0.5em;
-        text-align: center;
-      }
-    }
-    .lorem {
-      .lorem-title {
-        font-size: 2vh;
-        line-height: 3vh;
-      }
-      .lorem-text {
-        font-size: 7px;
-        line-height: 14px;
-      }
-    }
-    .backgroundImages {
-      &::before,
-      &::after {
-        display: none;
-      }
+  .blackSquare {
+    position: absolute;
+    bottom: 4vh;
+    right: -10vh;
+    width: 17vh;
+    height: 17vh;
+    background-color: #23262b;
+    transform: rotate(45deg);
+    z-index: 2;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1vh;
+      right: 11vh;
+      width: 3vh;
+      height: 3vh;
+      background-color: $lightBlue;
     }
   }
 }
 
-@media (max-width: 576px) {
-  .container {
-    .lorem {
-      top: 45vw;
-      .lorem-title {
-        font-size: 1vh;
-        line-height: 1vh;
+@media (max-width: 768px) {
+  .homepage {
+    .home {
+      .home-title {
+        font-size: 2vh;
+        line-height: 1.25rem;
       }
-      .lorem-text {
-        font-size: 5px;
-        line-height: 5px;
-        padding: 5px 0;
+      .home-text {
+        font-size: 7px;
       }
     }
   }

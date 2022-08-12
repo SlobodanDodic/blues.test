@@ -1,67 +1,51 @@
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import astroBkg from "../assets/middle/astro-bkg.png";
 
 export default function Services() {
   return (
     <div id="services" className="services">
-      <img alt="" src={astroBkg} className="vw-100" />
-
       <div className="whiteSquare"></div>
 
-      <div className="grid-container">
-        <Row>
-          <Col sm={12} md={2} className="column">
+      <div className="dummy-text">
+        <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+      </div>
+
+      <div className="box">
+        <div className="service-grid">
+          <div className="grid-column">
             Lorem ispum lorem ipsum ispum lorem ipsum ispum lorem ipsum
             <br />
             <span>
               There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
               in some form, by injected humour, even slightly believable.
             </span>
-          </Col>
-          <Col sm={12} md={2} className="column">
+          </div>
+          <div className="grid-column">
             ispum lorem ipsum
             <br />
             <span>There are many variations of passages of Lorem Ipsum available,</span>
-          </Col>
-          <Col sm={12} md={2} className="column">
-            Ispum lorem ipsum ispum lorem ipsum ispum lorem ipsum
-          </Col>
-          <Col sm={12} md={2} className="column">
-            Ispum lorem ipsum ispum lorem ipsum ispum lorem ipsum
-          </Col>
-        </Row>
+          </div>
+          <div className="grid-column">Ispum lorem ipsum ispum lorem ipsum ispum lorem ipsum</div>
+          <div className="grid-column">Ispum lorem ipsum ispum lorem ipsum ispum lorem ipsum</div>
+        </div>
 
-        <Row>
-          <Col sm={12} md={2} className="column">
+        <div className="service-grid">
+          <div className="grid-column">
             Ispum lorem ipsum
             <br />
             <span>Lorem ipsum lorem ipsum lorem ipsum</span>
-          </Col>
-          <Col sm={12} md={2} className="column">
-            Ispum lorem ipsum ispum lorem ipsum ispum lorem ipsum
-          </Col>
-          <Col sm={12} md={2} className="column">
-            Ispum lorem ipsum ispum lorem ipsum ispum lorem ipsum
-          </Col>
-          <Col sm={12} md={2} className="column">
+          </div>
+          <div className="grid-column">Ispum lorem ipsum ispum lorem ipsum ispum lorem ipsum</div>
+          <div className="grid-column">Ispum lorem ipsum ispum lorem ipsum ispum lorem ipsum</div>
+          <div className="grid-column">
             Ispum lorem ipsum ispum lorem ipsum ispum lorem ipsum
             <br />
             <span>There are many variations of passages of Lorem Ipsum available,</span>
-          </Col>
-        </Row>
-
-        <div style={{ width: "100vw", textAlign: "center", marginBottom: "6vh" }}>
-          <Button className="service-btn">All services</Button>
+          </div>
         </div>
+      </div>
 
-        <div className="cup">
-          <h3 className="cup-text">
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
-            Lorem Ipsum has been the industry's" - Jack Welch
-          </h3>
-        </div>
+      <div style={{ textAlign: "center", fontWeight: "300" }}>
+        <Button className="service-btn">All services</Button>
       </div>
     </div>
   );

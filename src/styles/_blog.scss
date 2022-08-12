@@ -1,22 +1,23 @@
 .blog {
   position: relative;
-  top: 155vh;
   color: $whiteColor;
-  height: 75vh;
+  padding-top: 15vh;
   h2 {
     padding-bottom: 20px;
     font-weight: 300;
     text-align: center;
     margin-bottom: 5vh;
   }
-  .container {
+  .blog-container {
+    width: 75vw;
+    margin: 0 auto;
     &::before {
       content: "";
-      top: 250px;
-      left: 0vw;
       position: absolute;
+      top: 330px;
+      left: 0vw;
       width: 100vw;
-      height: 330px;
+      height: 240px;
       background-color: #e8f8fb;
     }
     .row {

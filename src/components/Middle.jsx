@@ -1,6 +1,5 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import astroBkg from "../assets/middle/astro-bkg.png";
 import handball from "../assets/middle/handball.png";
 import soccer from "../assets/middle/soccer.png";
 import volleyball from "../assets/middle/volleyball.png";
@@ -15,18 +14,16 @@ import biathlon from "../assets/middle/biathlon.png";
 export default function Middle() {
   return (
     <div id="middle" className="middle">
-      <img alt="" src={astroBkg} className="vw-100" />
-
-      <h5>Train your train.</h5>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-        <br />
-        been the industry's Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        <br />
-        Lorem Ipsum has been the industry's
-      </p>
-
-      <div className="blackSquare"></div>
+      <div className="train">
+        <h5>Train your train.</h5>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+          <br />
+          been the industry's Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          <br />
+          Lorem Ipsum has been the industry's
+        </p>
+      </div>
 
       <div className="icons-div">
         <Row className="row-up">
@@ -64,12 +61,6 @@ export default function Middle() {
             <img src={biathlon} alt="footballPlayer" /> biathlon
           </Col>
         </Row>
-      </div>
-
-      <div className="lorem">
-        <h3 className="lorem-title">
-          Lorem Ipsum is simply dummy text of <br /> the printing and typesetting industry.
-        </h3>
       </div>
     </div>
   );

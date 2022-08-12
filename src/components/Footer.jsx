@@ -18,7 +18,7 @@ export default function Footer() {
             <span className="fw-light">MACURA</span>
           </Navbar.Brand>
 
-          <Nav className="justify-content-end flex-grow-1 pe-4 pages">
+          <Nav className="justify-content-end flex-grow-1 pages">
             <Nav.Link href="#homepage">Homepage</Nav.Link>
             <Nav.Link href="#about">About</Nav.Link>
             <Nav.Link href="#sevices">Services</Nav.Link>

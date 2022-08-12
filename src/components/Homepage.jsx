@@ -1,17 +1,13 @@
 import React, { useState } from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import Stack from "react-bootstrap/Stack";
-
-import heroImage from "../assets/hero/hero-image.png";
 
 export default function Homepage() {
   const [style, setStyle] = useState("row-info");
+  const [rays, setRays] = useState("rays");
 
   const changeStyle = () => {
     setStyle("row-info-hide");
+    setRays("rays-hide");
   };
 
   const handeClick = () => {
@@ -19,37 +15,29 @@ export default function Homepage() {
   };
 
   return (
-    <Container id="homepage" className="hero m-0 p-0">
-      <div className="backgroundImages vw-100">
-        <img alt="" src={heroImage} className="vw-100" />
+    <div id="homepage" className="homepage">
+      <div className={rays}></div>
+
+      <div className={style}>
+        You're looking at a temporary website version, You're looking at a temporary website version You're looking at a
+        temporary.
+        <Button onClick={changeStyle}>x</Button>
       </div>
 
-      <Row className={style}>
-        <Col>
-          You're looking at a temporary website version, You're looking at a temporary website version You're looking at
-          a temporary.
-          <Button onClick={changeStyle}>x</Button>
-        </Col>
-      </Row>
+      <div className="home">
+        <div className="home-title">
+          Lorem Ipsum has been the industry's.<span>|</span>
+        </div>
+        <div className="home-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s.
+        </div>
+        <div className="home-text">
+          <Button onClick={handeClick}>Tell me more</Button>
+        </div>
+      </div>
 
-      <Stack className="lorem">
-        <Row>
-          <Col className="lorem-title">
-            Lorem Ipsum has <br /> been the industry's.<span>|</span>
-          </Col>
-        </Row>
-        <Row>
-          <Col className="lorem-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem <br /> Ipsum has been the
-            industry's standard dummy text ever since the 1500s.
-          </Col>
-        </Row>
-        <Row>
-          <Col className="lorem-text">
-            <Button onClick={handeClick}>Tell me more</Button>
-          </Col>
-        </Row>
-      </Stack>
-    </Container>
+      <div className="blackSquare"></div>
+    </div>
   );
 }

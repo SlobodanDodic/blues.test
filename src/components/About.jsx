@@ -20,9 +20,9 @@ export default function About() {
           <img src={me} alt="me" id="me" />
         </Col>
         <Col className="col-content" sm={12} lg={5}>
-          <h2>
+          <h3>
             About me<span>|</span>
-          </h2>
+          </h3>
           <span className="span-text">
             There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
             some form, by injected humour, or randomised words which don't look even slightly believable. If you are

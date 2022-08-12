@@ -1,4 +1,3 @@
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import runner from "../assets/blog/foto1-run.png";
@@ -11,16 +10,17 @@ export default function Blog() {
     <div id="blog" className="blog">
       <h2>Latest from the blog.</h2>
 
-      <Container>
+      <div className="blog-container">
         <Row>
-          <Col className="col-image" xs={6}>
+          <Col className="col-image" xs={12} md={6}>
             <img src={runner} alt="runner" />
             <div className="overlay">
               <h6>03.10.2019.</h6>
               <h5>Align your mind and body with the demanding.</h5>
             </div>
           </Col>
-          <Col xs={6}>
+
+          <Col xs={12} md={6}>
             <Row>
               <Col className="col-image">
                 <img src={weight} alt="" />
@@ -31,14 +31,14 @@ export default function Blog() {
               </Col>
             </Row>
             <Row className="third">
-              <Col className="col-image">
+              <Col xs={12} md={6} className="col-image">
                 <img src={bike} alt="" />
                 <div className="overlay">
                   <h6>03.10.2019.</h6>
                   <h5>Align your mind and body...</h5>
                 </div>
               </Col>
-              <Col className="col-image">
+              <Col xs={12} md={6} className="col-image">
                 <img src={box} alt="" />
                 <div className="overlay">
                   <h6>03.10.2019.</h6>
@@ -48,7 +48,7 @@ export default function Blog() {
             </Row>
           </Col>
         </Row>
-      </Container>
+      </div>
     </div>
   );
 }

@@ -13,15 +13,13 @@ function App() {
   return (
     <div className="App">
       <Topbar />
-      <Homepage />
-      <Middle />
-      <Services />
-
       <div className="astro-bkg">
-        <References />
-        <About />
+        <Homepage />
+        <Middle />
       </div>
-
+      <Services />
+      <References />
+      <About />
       <Blog />
       <Contact />
       <Footer />
