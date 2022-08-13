@@ -16,7 +16,7 @@ export default function About() {
       <div className="bigBlueSquare"></div>
 
       <Row>
-        <Col sm={12} lg={5}>
+        <Col className="col-image" sm={12} lg={5}>
           <img src={me} alt="me" id="me" />
         </Col>
         <Col className="col-content" sm={12} lg={5}>

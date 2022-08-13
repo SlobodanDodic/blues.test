@@ -68,3 +68,19 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .about {
+    .row {
+      flex-direction: column-reverse;
+      .col-image {
+        display: flex;
+        justify-content: center;
+        #me {
+          width: 45vw;
+          height: 45vw;
+        }
+      }
+    }
+  }
+}

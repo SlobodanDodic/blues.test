@@ -11,23 +11,23 @@ export default function Footer() {
   return (
     <div id="footer" className="footer">
       <Navbar key="xl" expand="xl">
-        <Container fluid>
+        <Container fluid className="footer-container">
           <Navbar.Brand href="#" className="brand">
             <img alt="" src={logo} className="position-absolute" />
             <span className="fw-bold">NADA</span>
             <span className="fw-light">MACURA</span>
           </Navbar.Brand>
 
-          <Nav className="justify-content-end flex-grow-1 pages">
-            <Nav.Link href="#homepage">Homepage</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#sevices">Services</Nav.Link>
-            <Nav.Link href="#references">References</Nav.Link>
-            <Nav.Link href="#blog">Blog</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-          </Nav>
+          <Nav className="justify-content-end footer-links">
+            <div className="pages">
+              <Nav.Link href="#homepage">Homepage</Nav.Link>
+              <Nav.Link href="#about">About</Nav.Link>
+              <Nav.Link href="#sevices">Services</Nav.Link>
+              <Nav.Link href="#references">References</Nav.Link>
+              <Nav.Link href="#blog">Blog</Nav.Link>
+              <Nav.Link href="#contact">Contact</Nav.Link>
+            </div>
 
-          <Nav className="justify-content-end">
             <Nav.Link href="#linkedin" className="social-link p-0">
               <TbBrandLinkedin />
             </Nav.Link>
@@ -43,10 +43,11 @@ export default function Footer() {
 
       <Row className="container-last">
         <Col className="col-left">
-          Photography copyrights: <a href="nekilink1">Neki link</a> | <a href="nekilink1">Neki neki link.</a>
+          <span>Photography copyrights: </span>
+          <a href="nekilink1">Neki link</a> | <a href="nekilink1">Neki neki link.</a>
         </Col>
         <Col className="col-right">
-          Design and development:{" "}
+          <span>Design and development: </span>
           <a href="https://www.popwebdesign.net/" target="_blank" rel="noreferrer">
             PopArt Studio
           </a>
