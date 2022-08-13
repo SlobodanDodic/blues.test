@@ -1,0 +1,6 @@
+Web site test: 
+1. Works on mobile view (tested on screen based on iPhone 12 Pro with size 390x844),
+2. 
+3. 
+4. 
+5. 
