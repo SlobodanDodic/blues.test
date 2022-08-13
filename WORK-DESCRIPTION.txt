@@ -1,0 +1,6 @@
+Web site test: 
+1. Works on small devices (≥576px): tested on screen sizes for iPhone 12 Pro with 390x844 pixels and Samsung Galaxy S8+ 360x740 pixels,
+2. Works on medium size devices (≥768px): tested on screen size for iPad mini 768x1024 pixels,
+3. Works on large size devices (≥992px): 
+4. Works on extra large size devices (≥1200px): 
+5. Works on extra extra large size devices (≥1400px): 
