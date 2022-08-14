@@ -38,6 +38,11 @@
         &:not(:last-child) {
           border-right: 1px solid #444444;
         }
+        &:hover {
+          border: 0.5px solid $lightBlue;
+          cursor: pointer;
+          transition: border 2s;
+        }
         img {
           width: 3vh;
         }

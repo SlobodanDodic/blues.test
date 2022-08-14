@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import ScrollToTop from "react-scroll-to-top";
 import "./styles.css";
 import Topbar from "./components/Topbar";
 import Homepage from "./components/Homepage";
@@ -20,6 +20,8 @@ function App() {
 
   return (
     <div className="App">
+      <ScrollToTop smooth />
+
       <Topbar />
       <div className="astro-bkg">
         <Homepage />

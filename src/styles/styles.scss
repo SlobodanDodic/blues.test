@@ -24,6 +24,17 @@ body {
   font-family: $robotoFont !important;
 }
 
+.App {
+  .scroll-to-top {
+    background-color: transparent;
+    border-radius: 50%;
+    filter: invert(1);
+    svg {
+      filter: contrast(0.5);
+    }
+  }
+}
+
 .astro-bkg {
   &::before {
     content: "";
