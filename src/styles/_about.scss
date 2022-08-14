@@ -11,7 +11,19 @@
     height: 29vw;
     background-color: $lightBlue;
     transform: rotate(45deg);
-    &::before {
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0vh;
+    //   left: 0vh;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-image: url(/src/assets/about/meBkg.png);
+    //   background-position: left;
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    // }
+    &::after {
       content: "";
       top: 13vw;
       left: 27vw;

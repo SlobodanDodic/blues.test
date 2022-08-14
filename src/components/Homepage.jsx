@@ -3,11 +3,9 @@ import Button from "react-bootstrap/Button";
 
 export default function Homepage({ dataFadeRight }) {
   const [style, setStyle] = useState("row-info");
-  const [rays, setRays] = useState("rays");
 
   const changeStyle = () => {
     setStyle("row-info-hide");
-    setRays("rays-hide");
   };
 
   const handeClick = () => {
@@ -16,8 +14,6 @@ export default function Homepage({ dataFadeRight }) {
 
   return (
     <div id="homepage" className="homepage">
-      <div className={rays}></div>
-
       <div className={style} data-aos={dataFadeRight}>
         You're looking at a temporary website version, You're looking at a temporary website version You're looking at a
         temporary.

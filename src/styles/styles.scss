@@ -45,28 +45,107 @@ body {
     height: 100%;
     background-color: green;
   }
+  .summit-bkg {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -34vh;
+      left: -6vw;
+      width: 100%;
+      height: 100%;
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(/src/assets/footer/summitBkg.png);
+    }
+  }
+  .rays {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0vh;
+      right: 0%;
+      width: 29%;
+      height: 50%;
+      z-index: -1;
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat;
+      background-image: url(/src/assets/hero/centerRight-bkg.png);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: -20%;
+      right: 0%;
+      width: 78%;
+      height: 73%;
+      z-index: -1;
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat;
+      background-image: url(/src/assets/hero/upRightCorner-bkg.png);
+    }
+  }
 }
 
 .astro-bkg {
+  position: relative;
   overflow: hidden;
   &::before {
     content: "";
-    top: 15vh;
+    top: 0vh;
     right: 0%;
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    background-image: url(/src/assets/astro-bkg.png);
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: top;
+    background-image: url(/src/assets/astro-bkg.png);
+    z-index: -1;
   }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 60vh;
+    left: -60vw;
+    width: 89%;
+    height: 50%;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-image: url(/src/assets/whiteSquareBkpLeft.png);
+  }
+  .whiteSquare {
+    position: absolute;
+    top: 100vh;
+    left: -12vw;
+    width: 19vw;
+    height: 19vw;
+    max-width: 600px;
+    max-height: 600px;
+    transform: rotate(45deg);
+    background-color: $whiteColor;
+    z-index: 1;
+    &::before {
+      content: "";
+      top: 7vw;
+      left: 18vw;
+      position: absolute;
+      width: 3vw;
+      height: 3vw;
+      background-color: $lightBlue;
+    }
+  }
+
   .golman {
     &::before {
       content: "";
       position: absolute;
-      top: 130vh;
+      top: 70vh;
       left: 69vw;
       width: 31%;
       height: 58%;
@@ -99,24 +178,16 @@ body {
   }
 }
 
-.whiteSquare {
-  position: absolute;
-  top: 75vh;
-  left: -12vw;
-  width: 19vw;
-  height: 19vw;
-  max-width: 600px;
-  max-height: 600px;
-  transform: rotate(45deg);
-  background-color: $whiteColor;
-  z-index: 1;
-  &::before {
-    content: "";
-    top: 7vw;
-    left: 18vw;
-    position: absolute;
-    width: 3vw;
-    height: 3vw;
-    background-color: $lightBlue;
+@media (max-width: 768px) {
+  .App {
+    .rays {
+      &::before {
+        top: -45vh;
+        width: 38%;
+      }
+      &::after {
+        top: -32%;
+      }
+    }
   }
 }

@@ -25,14 +25,16 @@ function App() {
       <ScrollToTop smooth />
 
       <Topbar />
-      <div className="astro-bkg">
-        <Homepage dataFadeRight="slide-right" />
-        <div className="whiteSquare"></div>
-        <Middle data="flip-down" />
-        <div className="golman"></div>
-      </div>
 
-      <Services dataFade="fade-up" dataZoom="zoom-in" />
+      <div className="astro-bkg">
+        <div className="rays">
+          <Homepage dataFadeRight="slide-right" />
+          <div className="whiteSquare"></div>
+          <Middle data="flip-down" />
+          <div className="golman"></div>
+          <Services dataFade="fade-up" dataZoom="zoom-in" />
+        </div>
+      </div>
 
       <div className="box2">
         <div className="astro-bkg2">
@@ -42,8 +44,11 @@ function App() {
       </div>
 
       <Blog />
-      <Contact />
-      <Footer />
+
+      <div className="summit-bkg">
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }
