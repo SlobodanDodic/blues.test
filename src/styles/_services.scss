@@ -70,7 +70,9 @@
     border-radius: 0;
     z-index: 2;
     &:hover {
+      transition: background-color 1s ease-in, border 1s ease-in;
       background-color: $lightBlue;
+      border: 1px solid $mutedColor;
     }
   }
   .box {

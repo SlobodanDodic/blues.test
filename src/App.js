@@ -26,7 +26,7 @@ function App() {
 
       <Topbar />
       <div className="astro-bkg">
-        <Homepage />
+        <Homepage dataFadeRight="slide-right" />
         <div className="whiteSquare"></div>
         <Middle data="flip-down" />
         <div className="golman"></div>

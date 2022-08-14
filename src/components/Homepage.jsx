@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 
-export default function Homepage() {
+export default function Homepage({ dataFadeRight }) {
   const [style, setStyle] = useState("row-info");
   const [rays, setRays] = useState("rays");
 
@@ -18,7 +18,7 @@ export default function Homepage() {
     <div id="homepage" className="homepage">
       <div className={rays}></div>
 
-      <div className={style}>
+      <div className={style} data-aos={dataFadeRight}>
         You're looking at a temporary website version, You're looking at a temporary website version You're looking at a
         temporary.
         <Button onClick={changeStyle}>x</Button>
