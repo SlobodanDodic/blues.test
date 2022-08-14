@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollToTop from "react-scroll-to-top";
+import ProgressBar from "react-scroll-progress-bar";
 import "./styles.css";
 import Topbar from "./components/Topbar";
 import Homepage from "./components/Homepage";
@@ -20,22 +21,22 @@ function App() {
 
   return (
     <div className="App">
+      <ProgressBar bgcolor="#00a6ca" />
       <ScrollToTop smooth />
 
       <Topbar />
       <div className="astro-bkg">
         <Homepage />
+        <div className="whiteSquare"></div>
         <Middle data="flip-down" />
+        <div className="golman"></div>
       </div>
 
-      <div className="whiteSquare"></div>
-      {/* <div className="golman-cup"></div> */}
-
-      <Services data="fade-up" />
+      <Services dataFade="fade-up" dataZoom="zoom-in" />
 
       <div className="box2">
         <div className="astro-bkg2">
-          <References data="zoom-in" />
+          <References />
           <About />
         </div>
       </div>

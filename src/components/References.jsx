@@ -6,7 +6,7 @@ import Tab from "react-bootstrap/Tab";
 import Button from "react-bootstrap/Button";
 import { RefData } from "./RefData";
 
-export default function References({ data }) {
+export default function References() {
   const [isActive, setActive] = useState(true);
 
   const toggleClass = () => {
@@ -15,12 +15,12 @@ export default function References({ data }) {
 
   return (
     <div id="references" className="references">
-      <div className="cup" data-aos={data}>
+      {/* <div className="cup" data-aos={data}>
         <h3 className="cup-text">
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
           Lorem Ipsum has been the industry's" - Jack Welch
         </h3>
-      </div>
+      </div> */}
 
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <Row className="row-pills">

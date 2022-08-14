@@ -1,7 +1,7 @@
 .blog {
   position: relative;
   color: $whiteColor;
-  // padding-top: 15vh;
+  padding-top: 15vh;
   h2 {
     padding-bottom: 20px;
     font-weight: 300;
@@ -14,7 +14,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 20vh;
+      top: 35vh;
       left: 0vw;
       width: 100vw;
       height: 25vh;
