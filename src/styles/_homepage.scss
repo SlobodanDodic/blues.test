@@ -3,11 +3,20 @@
   isolation: isolate;
   overflow: hidden;
   padding: 150px 0;
-  background: linear-gradient(180deg, #0b0b2075 0%, transparent 80%), url(/src/assets/hero/hero-image.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-blend-mode: lighten;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: url(/src/assets/hero/hero-image.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
   .rays-hide {
     display: none;
   }
@@ -19,20 +28,23 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      opacity: 0.5;
       z-index: -1;
-      background: url(/src/assets/hero/centerRight-bkg.png) right no-repeat;
+      background-image: url(/src/assets/hero/centerRight-bkg.png);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
     }
     &::after {
       content: "";
-      top: 0;
-      right: 0%;
       position: absolute;
+      top: 0;
+      right: -40%;
       width: 100%;
       height: 100%;
-      opacity: 0.5;
-      z-index: -1;
-      background: url(/src/assets/hero/upRightCorner-bkg.png) right no-repeat;
+      background-image: url(/src/assets/hero/upRightCorner-bkg.png);
+      background-size: cover;
+      background-position: right;
+      background-repeat: no-repeat;
     }
   }
   .row-info-hide {
@@ -85,6 +97,7 @@
       padding: 1em 1.5em;
       border-radius: 0;
       font-size: 1em;
+      z-index: 1;
     }
   }
   .blackSquare {

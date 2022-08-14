@@ -25,7 +25,87 @@ body {
 }
 
 .astro-bkg {
-  background-image: url(/src/assets/astro-bkg.png);
-  background-position: center;
-  background-size: contain;
+  &::before {
+    content: "";
+    top: 15vh;
+    right: 0%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(/src/assets/astro-bkg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+.box2 {
+  position: relative;
+  .astro-bkg2 {
+    &::before {
+      content: "";
+      top: 45vh;
+      right: 0%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.5;
+      background-image: url(/src/assets/astro-bkg.png);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: contain;
+    }
+  }
+}
+
+.whiteSquare {
+  position: absolute;
+  top: 75vh;
+  left: -12vw;
+  width: 19vw;
+  height: 19vw;
+  max-width: 600px;
+  max-height: 600px;
+  transform: rotate(45deg);
+  background-color: $whiteColor;
+  z-index: 1;
+  &::before {
+    content: "";
+    top: 7vw;
+    left: 18vw;
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    background-color: $lightBlue;
+  }
+}
+
+.golman-cup {
+  &::before {
+    content: "";
+    position: absolute;
+    top: clamp(46vh, 46vh + 20rem, 107vh);
+    left: 40vw;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: 40vw;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-image: url(/src/assets/serv/goalman.png);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 107vh;
+    left: -60vh;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: 55vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/src/assets/serv/cup.png);
+  }
 }

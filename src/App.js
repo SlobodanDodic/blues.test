@@ -1,3 +1,7 @@
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import "./styles.css";
 import Topbar from "./components/Topbar";
 import Homepage from "./components/Homepage";
@@ -10,16 +14,30 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 2500 });
+  }, []);
+
   return (
     <div className="App">
       <Topbar />
       <div className="astro-bkg">
         <Homepage />
-        <Middle />
+        <Middle data="flip-down" />
       </div>
-      <Services />
-      <References />
-      <About />
+
+      <div className="whiteSquare"></div>
+      {/* <div className="golman-cup"></div> */}
+
+      <Services data="fade-up" />
+
+      <div className="box2">
+        <div className="astro-bkg2">
+          <References data="zoom-in" />
+          <About />
+        </div>
+      </div>
+
       <Blog />
       <Contact />
       <Footer />

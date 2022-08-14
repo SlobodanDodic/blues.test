@@ -6,7 +6,7 @@ import Tab from "react-bootstrap/Tab";
 import Button from "react-bootstrap/Button";
 import { RefData } from "./RefData";
 
-export default function References() {
+export default function References({ data }) {
   const [isActive, setActive] = useState(true);
 
   const toggleClass = () => {
@@ -15,7 +15,7 @@ export default function References() {
 
   return (
     <div id="references" className="references">
-      <div className="cup">
+      <div className="cup" data-aos={data}>
         <h3 className="cup-text">
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
           Lorem Ipsum has been the industry's" - Jack Welch
@@ -35,18 +35,18 @@ export default function References() {
               })}
             </Nav>
           </Col>
-          <Col sm={12} md={9}>
+          <Col sm={12} md={9} className="col-map">
             <Tab.Content>
               {RefData.map((item) => {
                 return (
                   <Tab.Pane eventKey={item.eventKey} key={item.id}>
                     <Row>
-                      <Col className="col-content" sm={12} lg={6}>
+                      <Col className="col-content" sm={12} lg={7}>
                         <h3>{item.title}</h3>
                         <span className="span-container">
-                          <span className="quote-first">" </span>
+                          <span className="quote-first"></span>
                           {item.text}
-                          <span className="quote-second"> "</span>
+                          <span className="quote-second"></span>
                         </span>
                         <h4>{item.person}</h4>
                         <span className="span-container">
@@ -59,7 +59,7 @@ export default function References() {
                           </Button>
                         </div>
                       </Col>
-                      <Col sm={12} lg={4} className="col-image">
+                      <Col sm={12} lg={5} className="col-image" style={{ zIndex: "2" }}>
                         <img src={item.img} alt={item.title} id="aleks" />
                       </Col>
                     </Row>
@@ -69,9 +69,9 @@ export default function References() {
             </Tab.Content>
           </Col>
         </Row>
-      </Tab.Container>
 
-      <div className="bigWhiteSquare"></div>
+        <div className="bigWhiteSquare"></div>
+      </Tab.Container>
     </div>
   );
 }

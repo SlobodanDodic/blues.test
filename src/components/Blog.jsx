@@ -13,37 +13,47 @@ export default function Blog() {
       <div className="blog-container">
         <Row>
           <Col className="col-image" xs={12} md={6}>
-            <img src={runner} alt="runner" />
-            <div className="overlay">
-              <h6>03.10.2019.</h6>
-              <h5>Align your mind and body with the demanding.</h5>
-            </div>
+            <figure>
+              <img src={runner} alt="runner" />
+              <div className="overlay">
+                <h6>03.10.2019.</h6>
+                <h5>Align your mind and body with the demanding.</h5>
+              </div>
+            </figure>
           </Col>
 
           <Col xs={12} md={6}>
             <Row>
               <Col className="col-image">
-                <img src={weight} alt="" />
-                <div className="overlay weight">
-                  <h6>03.10.2019.</h6>
-                  <h5>Align your mind and body with the demanding.</h5>
-                </div>
+                <figure>
+                  <img src={weight} alt="" />
+                  <div className="overlay overlay-weight">
+                    <h6>03.10.2019.</h6>
+                    <h5>Align your mind and body with the demanding.</h5>
+                  </div>
+                </figure>
               </Col>
             </Row>
+
             <Row className="third">
               <Col xs={12} md={6} className="col-image">
-                <img src={bike} alt="" />
-                <div className="overlay">
-                  <h6>03.10.2019.</h6>
-                  <h5>Align your mind and body...</h5>
-                </div>
+                <figure>
+                  <img src={bike} alt="" />
+                  <div className="overlay overlay-bike">
+                    <h6>03.10.2019.</h6>
+                    <h5>Align your mind and body...</h5>
+                  </div>
+                </figure>
               </Col>
+
               <Col xs={12} md={6} className="col-image">
-                <img src={box} alt="" />
-                <div className="overlay">
-                  <h6>03.10.2019.</h6>
-                  <h5>Align your mind and body...</h5>
-                </div>
+                <figure>
+                  <img src={box} alt="" />
+                  <div className="overlay overlay-box">
+                    <h6>03.10.2019.</h6>
+                    <h5>Align your mind and body...</h5>
+                  </div>
+                </figure>
               </Col>
             </Row>
           </Col>

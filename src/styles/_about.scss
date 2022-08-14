@@ -2,23 +2,23 @@
   position: relative;
   color: $whiteColor;
   overflow: hidden;
-  background-image: url(/src/assets/astro-bkg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 12vh 0;
+  // background-image: url(/src/assets/astro-bkg.png);
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
   .bigBlueSquare {
     position: absolute;
-    top: 13vh;
-    left: -12vw;
-    width: 24vw;
-    height: 24vw;
+    top: 16vh;
+    left: -15vw;
+    width: 29vw;
+    height: 29vw;
     background-color: $lightBlue;
     transform: rotate(45deg);
-    z-index: -1;
     &::before {
       content: "";
-      top: 12vw;
-      left: 23vw;
+      top: 13vw;
+      left: 27vw;
       position: absolute;
       width: 3vw;
       height: 3vw;
@@ -31,6 +31,12 @@
     justify-content: center;
     width: 75vw;
     margin: 0 auto;
+    .col-image {
+      img {
+        width: 26vw;
+        height: 26vw;
+      }
+    }
     .col-content {
       padding: 30px;
       h3 {
@@ -62,23 +68,21 @@
     .col-tabs {
       padding: 100px 0px;
     }
-    #me {
-      width: 26vw;
-      height: 26vw;
-    }
   }
 }
 
 @media (max-width: 768px) {
   .about {
+    padding: 0;
     .row {
       flex-direction: column-reverse;
       .col-image {
         display: flex;
         justify-content: center;
-        #me {
-          width: 45vw;
-          height: 45vw;
+        padding: 10px 0;
+        img {
+          width: 55vw;
+          height: 55vw;
         }
       }
     }

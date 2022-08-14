@@ -11,7 +11,7 @@ import tennis from "../assets/middle/tennis.png";
 import athletics from "../assets/middle/athletics.png";
 import biathlon from "../assets/middle/biathlon.png";
 
-export default function Middle() {
+export default function Middle({ data }) {
   return (
     <div id="middle" className="middle">
       <div className="train">
@@ -25,7 +25,7 @@ export default function Middle() {
         </p>
       </div>
 
-      <div className="icons-div">
+      <div className="icons-div" data-aos={data}>
         <Row className="row-up">
           <Col xs={6} md={2}>
             <img src={handball} alt="footballPlayer" /> handball

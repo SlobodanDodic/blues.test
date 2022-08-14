@@ -1,7 +1,7 @@
 .blog {
   position: relative;
   color: $whiteColor;
-  padding-top: 15vh;
+  // padding-top: 15vh;
   h2 {
     padding-bottom: 20px;
     font-weight: 300;
@@ -14,44 +14,55 @@
     &::before {
       content: "";
       position: absolute;
-      top: 330px;
+      top: 20vh;
       left: 0vw;
       width: 100vw;
-      height: 240px;
+      height: 25vh;
       background-color: #e8f8fb;
     }
     .row {
       .col-image {
-        position: relative;
-        padding: 1%;
+        &:hover .overlay {
+          opacity: 1;
+          cursor: pointer;
+        }
         img {
           width: 100%;
+          &:hover {
+            filter: grayscale(100%);
+            cursor: pointer;
+            border-top-right-radius: 25px;
+            transition: border-top-right-radius 1.5s;
+          }
+        }
+        figure {
+          position: relative;
         }
       }
       .overlay {
         position: absolute;
-        bottom: 2%;
-        background: linear-gradient(180deg, transparent 0%, rgba(0, 166, 202, 1) 100%);
-        width: 96%;
+        bottom: 0%;
+        width: 100%;
+        background: linear-gradient(180deg, transparent 0%, $lightBlue);
         transition: 0.5s ease;
         opacity: 0.25;
         color: $whiteColor;
-        padding: 20px;
+        padding: 1rem;
         text-align: left;
         font-family: $latoFont;
         h6 {
-          font-size: 1rem;
+          font-size: 0.75rem;
         }
         h5 {
-          font-size: 1.25rem;
+          font-size: 1rem;
         }
-        &:hover {
-          opacity: 1;
-        }
-      }
-      .weight {
-        width: 98%;
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .blog {
+    padding-top: 5vh;
   }
 }

@@ -5,53 +5,56 @@
   background-color: $darkBgColor;
   background-blend-mode: lighten;
   background-image: url(/src/assets/astro-bkg.png);
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 30vh;
-    left: 40vw;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background-image: url(/src/assets/serv/goalman.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 41%;
-  }
-  .whiteSquare {
-    position: absolute;
-    top: 5vh;
-    left: -9vw;
-    width: 22vh;
-    height: 22vh;
-    background-color: $whiteColor;
-    transform: rotate(45deg);
-    &::before {
-      content: "";
-      position: absolute;
-      top: 7vw;
-      left: 15vw;
-      width: 4vw;
-      height: 4vw;
-      background-color: $lightBlue;
-    }
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   bottom: 0vh;
-    //   left: 0vh;
-    //   width: 100%;
-    //   height: 100%;
-    //   z-index: -1;
-    //   background: url(/src/assets/serv/whiteSquareBkp.png) left no-repeat;
-    // }
-  }
+  background-size: cover;
+  padding-top: 14vh;
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 50vh;
+  //   left: 0vh;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-image: url(/src/assets/serv/whiteSquareBkp.png);
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  // }
+  // .whiteSquare {
+  //   position: absolute;
+  //   top: -6vh;
+  //   left: -12vw;
+  //   width: 19vw;
+  //   height: 19vw;
+  //   max-width: 300px;
+  //   max-height: 300px;
+  //   transform: rotate(45deg);
+  //   background-color: $whiteColor;
+  //   z-index: 1;
+  //   &::before {
+  //     content: "";
+  //     top: 7vw;
+  //     left: 18vw;
+  //     position: absolute;
+  //     width: 3vw;
+  //     height: 3vw;
+  //     background-color: $lightBlue;
+  //   }
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     bottom: 0vh;
+  //     left: 0vh;
+  //     width: 100%;
+  //     height: 100%;
+  //     z-index: -1;
+  //     background: url(/src/assets/serv/whiteSquareBkp.png) left no-repeat;
+  //   }
+  // }
   .dummy-text {
     color: $whiteColor;
-    margin: 19vh 12vw 5vh;
+    margin: 2vh 12vw 5vh;
     max-width: 400px;
     h4 {
       font-weight: 300;
@@ -64,12 +67,15 @@
     font-size: 1rem;
     background-color: transparent;
     border-radius: 0;
+    z-index: 2;
     &:hover {
       background-color: $lightBlue;
     }
   }
   .box {
     margin: 0 11vw;
+    position: relative;
+    z-index: 2;
     .service-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -93,16 +99,38 @@
           line-height: 14px;
         }
       }
+      &:hover .grid-column {
+        filter: blur(3px);
+        opacity: 0.5;
+        transform: scale(0.98);
+        box-shadow: none;
+      }
+      &:hover .grid-column:hover {
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
+        box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+      }
     }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: 22vh;
+    //   left: 39vw;
+    //   width: 100%;
+    //   height: 100%;
+    //   z-index: -1;
+    //   background-image: url(/src/assets/serv/goalman.png);
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   background-size: 44%;
+    // }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .services {
-    &::before {
-      bottom: 86vh;
-      background-size: 60%;
-    }
+    padding-top: 0vh;
     .whiteSquare {
       position: absolute;
       top: 3vh;
@@ -123,13 +151,45 @@
     }
     .dummy-text {
       color: $whiteColor;
-      margin: 18vh auto 5vh;
+      margin: 8vh auto 5vh;
       text-align: center;
     }
     .box {
       .service-grid {
         display: block;
       }
+      &::before {
+        bottom: 212vw;
+        background-size: 40%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    .whiteSquare {
+      position: absolute;
+      top: 5vh;
+      left: -8vw;
+      width: 12vh;
+      height: 12vh;
+      background-color: $whiteColor;
+      transform: rotate(45deg);
+      &::before {
+        content: "";
+        position: absolute;
+        top: 9vw;
+        left: 15vw;
+        width: 4vw;
+        height: 4vw;
+        background-color: $lightBlue;
+      }
+    }
+    .dummy-text {
+      color: $whiteColor;
+      margin: 18vh auto 5vh;
+      text-align: center;
     }
   }
 }
